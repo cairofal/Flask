@@ -10,5 +10,9 @@ def homepage():
 def contacts():
     return render_template("contacts.html")
 
+@app.route("/users/<user_name>")
+def users(user_name):
+   return render_template("users.html", user_name=user_name)
+
 if __name__ == "__main__":
  app.run(debug=True)
